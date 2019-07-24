@@ -3231,6 +3231,12 @@ namespace MobileApp
 			// aapt resource value: 0x7f090023
 			public const int character_counter_pattern = 2131296291;
 			
+			// aapt resource value: 0x7f09002d
+			public const int fb_login = 2131296301;
+			
+			// aapt resource value: 0x7f09002e
+			public const int google_login = 2131296302;
+			
 			// aapt resource value: 0x7f090024
 			public const int password_toggle_content_description = 2131296292;
 			
@@ -3248,6 +3254,12 @@ namespace MobileApp
 			
 			// aapt resource value: 0x7f090013
 			public const int search_menu_title = 2131296275;
+			
+			// aapt resource value: 0x7f09002b
+			public const int sign_in_text = 2131296299;
+			
+			// aapt resource value: 0x7f09002c
+			public const int sign_up_text = 2131296300;
 			
 			// aapt resource value: 0x7f090014
 			public const int status_bar_notification_info_overflow = 2131296276;
