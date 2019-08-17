@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">MobileApp</string>
     <string name="action_settings">Settings</string>
-    <string name="sign_in_text">Sign in</string>
-    <string name="sign_up_text">Sign up</string>
-    <string name="fb_login">Login using Facebook</string>
-    <string name="google_login">Login using Google</string>
+    <string name="start_client">Start - klient</string>
+    <string name="start_restaurant">Start - restauracja</string>
+    <string name="login_text">Zaloguj się</string>
+    <string name="login_watermark">LOGIN</string>
+    <string name="password_watermark">HASŁO</string>
+    <string name="login_button">Dalej</string>
+    <string name="apply_button">Zatwierdź</string>
 </resources>

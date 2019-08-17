@@ -1,47 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/mainLogo"
+        android:src="@drawable/logo"
+    />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="1"
     />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="@string/sign_in_text"
+        android:text="@string/start_client"
         android:layout_weight="1"
-        
+        android:textSize="20dp"
+        android:id="@+id/startClientButton"
     />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="@string/sign_up_text"
+        android:text="@string/start_restaurant"
         android:layout_weight="1"
-        
+        android:textSize="20dp"
+        android:id="@+id/startRestaurantButton"
     />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="@string/fb_login"
-        android:layout_weight="1"
         
-    />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="@string/google_login"
-        android:layout_weight="1"
-        
-    />
-
 </LinearLayout>
