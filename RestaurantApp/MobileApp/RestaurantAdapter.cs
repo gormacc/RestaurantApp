@@ -40,8 +40,8 @@ namespace MobileApp
             if (view == null) // no view to re-use, create new
                 view = context.LayoutInflater.Inflate(Resource.Layout.list_item, null);
 
-            view.FindViewById<TextView>(Resource.Id.restaurantName).Text = item.RestaurantName;
-            view.FindViewById<TextView>(Resource.Id.restaurantDescription).Text = item.RestaurantDescription;
+            view.FindViewById<TextView>(Resource.Id.restaurantName).Text = item.Name;
+            view.FindViewById<TextView>(Resource.Id.restaurantDescription).Text = item.Description;
             //view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
 
             return view;

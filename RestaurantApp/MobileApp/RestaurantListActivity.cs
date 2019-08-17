@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 
 namespace MobileApp
 {
@@ -20,15 +21,27 @@ namespace MobileApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_list);
 
-            var resturantList = FindViewById<ListView>(Resource.Id.restaurantList);
-            resturantList.Adapter = new RestaurantAdapter(this, MockItems);
+            var restaurantList = FindViewById<ListView>(Resource.Id.restaurantList);
+            restaurantList.Adapter = new RestaurantAdapter(this, MockItems);
+
+            restaurantList.ItemClick += RestaurantList_ItemClick;
+        }
+
+        private void RestaurantList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var activity = new Intent(this, typeof(RestaurantActivity));
+
+            var restaurant = MockItems[e.Position];
+            activity.PutExtra("Restaurant", JsonConvert.SerializeObject(restaurant));
+
+            StartActivity(activity);
         }
 
         private List<RestaurantItem> MockItems = new List<RestaurantItem>()
         {
-            new RestaurantItem() {RestaurantName = "Nazwa1", RestaurantDescription = "Opis1"},
-            new RestaurantItem() {RestaurantName = "Nazwa2", RestaurantDescription = "Opis2"},
-            new RestaurantItem() {RestaurantName = "Nazwa3", RestaurantDescription = "Opis3"},
+            new RestaurantItem() {Name = "Nazwa1", Description = "Opis1"},
+            new RestaurantItem() {Name = "Nazwa2", Description = "Opis2"},
+            new RestaurantItem() {Name = "Nazwa3", Description = "Opis3"},
         };
 
     }
