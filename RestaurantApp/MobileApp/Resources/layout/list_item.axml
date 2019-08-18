@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:background="@drawable/border">
     
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test text"
-        android:textSize="20dp"
-        android:textColor="@android:color/black"
-        android:id="@+id/restaurantName"
-    />
+        android:padding="7dp">
+    
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/logo"
+        />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="test text 2"
-        android:textSize="20dp"
-        android:textColor="@android:color/darker_gray"
-        android:id="@+id/restaurantDescription"
-    />
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/itemText"
+            android:layout_weight="2">
+    
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test text"
+                android:textSize="25dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/restaurantName"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test text 2"
+                android:textSize="20dp"
+                android:textColor="@android:color/darker_gray"
+                android:id="@+id/restaurantDescription"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
 

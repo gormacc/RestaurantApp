@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:hint="Nazwa restauracji"
+        android:textSize="20dp"
+        android:id="@+id/restaurantAddName"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/logo"
+                android:id="@+id/restuarantAddLogo"
+                android:clickable="true"
+            />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+            />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:hint="Opis restauracji"
+            android:textSize="16dp"
+            android:id="@+id/restaurantAddDesc"
+            android:gravity="top"
+        />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:hint="Ilość zniżki"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:id="@+id/discountAddValue"
+        android:background="@drawable/border"
+        android:layout_marginHorizontal="60dp"
+        android:inputType="number"
+        android:gravity="center_vertical"
+    />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/border"
+        android:id="@+id/discountAddDate"
+        android:layout_marginHorizontal="60dp"
+        android:clickable="true"
+        android:hint="Data zniżki"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:gravity="center_vertical"
+    />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:textSize="20dp"
+        android:text="@string/apply_button"
+        android:id="@+id/applyButton"
+    />
+
+</LinearLayout>

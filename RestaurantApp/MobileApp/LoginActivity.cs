@@ -19,7 +19,13 @@ namespace MobileApp
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_login);
-            // Create your application here
+
+            FindViewById<Button>(Resource.Id.loginButton).Click += LoginActivity_Click;
+        }
+
+        private void LoginActivity_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(RestaurantAddActivity));
         }
     }
 }

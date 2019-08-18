@@ -22,7 +22,7 @@ namespace MobileApp
             SetContentView(Resource.Layout.activity_list);
 
             var restaurantList = FindViewById<ListView>(Resource.Id.restaurantList);
-            restaurantList.Adapter = new RestaurantAdapter(this, MockItems);
+            restaurantList.Adapter = new RestaurantAdapter(this, DataBase.Instance.Restaurants);
 
             restaurantList.ItemClick += RestaurantList_ItemClick;
         }
@@ -31,18 +31,10 @@ namespace MobileApp
         {
             var activity = new Intent(this, typeof(RestaurantActivity));
 
-            var restaurant = MockItems[e.Position];
+            var restaurant = DataBase.Instance.Restaurants[e.Position];
             activity.PutExtra("Restaurant", JsonConvert.SerializeObject(restaurant));
 
             StartActivity(activity);
         }
-
-        private List<RestaurantItem> MockItems = new List<RestaurantItem>()
-        {
-            new RestaurantItem() {Name = "Nazwa1", Description = "Opis1"},
-            new RestaurantItem() {Name = "Nazwa2", Description = "Opis2"},
-            new RestaurantItem() {Name = "Nazwa3", Description = "Opis3"},
-        };
-
     }
 }

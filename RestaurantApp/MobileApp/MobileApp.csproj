@@ -63,8 +63,10 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase.cs" />
     <Compile Include="RestaurantActivity.cs" />
     <Compile Include="RestaurantAdapter.cs" />
+    <Compile Include="RestaurantAddActivity.cs" />
     <Compile Include="RestaurantItem.cs" />
     <Compile Include="RestaurantListActivity.cs" />
     <Compile Include="LoginActivity.cs" />
@@ -142,6 +144,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\backIcon.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_restaurant_add.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

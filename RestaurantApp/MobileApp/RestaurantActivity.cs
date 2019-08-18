@@ -27,6 +27,8 @@ namespace MobileApp
 
             FindViewById<TextView>(Resource.Id.restaurantDescName).Text = restaurant.Name;
             FindViewById<TextView>(Resource.Id.restaurantDesc).Text = restaurant.Description;
+            FindViewById<TextView>(Resource.Id.discountValue).Text = restaurant.DiscountValue;
+            FindViewById<TextView>(Resource.Id.discountDate).Text = restaurant.DiscountDate;
         }
 
         private void RestaurantActivity_Click(object sender, EventArgs e)
