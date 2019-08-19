@@ -42,7 +42,7 @@ namespace MobileApp
 
             view.FindViewById<TextView>(Resource.Id.restaurantName).Text = item.Name;
             view.FindViewById<TextView>(Resource.Id.restaurantDescription).Text = item.Description;
-            //view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
+            new DownloadImageTask(view.FindViewById<ImageView>(Resource.Id.restaurantLogo)).Execute(item.ImageUrl);
 
             return view;
         }

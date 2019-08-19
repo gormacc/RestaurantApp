@@ -9,5 +9,7 @@
         public string DiscountValue { get; set; } = string.Empty;
 
         public string DiscountDate { get; set; } = string.Empty;
+
+        public string ImageUrl { get; set; } = "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKIWgaiJUtss/v2/1000x-1.jpg"; //string.Empty;
     }
 }

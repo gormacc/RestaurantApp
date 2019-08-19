@@ -31,6 +31,7 @@
         android:layout_weight="1"
         android:inputType="text"
         android:hint="@string/login_watermark"
+        android:id="@+id/loginValue"
         android:textAlignment="center"
     />
 
@@ -47,6 +48,7 @@
         android:inputType="textPassword"
         android:hint="@string/password_watermark"
         android:textAlignment="center"
+        android:id="@+id/passwordValue"
     />
 
     <Space

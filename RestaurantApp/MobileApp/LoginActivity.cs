@@ -25,7 +25,22 @@ namespace MobileApp
 
         private void LoginActivity_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(RestaurantAddActivity));
+            var login = FindViewById<EditText>(Resource.Id.loginValue).Text.ToLower();
+            var password = FindViewById<EditText>(Resource.Id.passwordValue).Text.ToLower();
+
+            if(login == "robert" && password == "flaga")
+            {
+                StartActivity(typeof(RestaurantAddActivity));
+            }
+            else if(login == "wyczysc" && password == "liste")
+            {
+                DataBase.Instance.DropDataBase();
+            }
+            else
+            {
+                Toast.MakeText(this, "Błędny login lub hasło", ToastLength.Short).Show();
+            }
+
         }
     }
 }

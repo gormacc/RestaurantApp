@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using System.Collections.Generic;
 
 namespace MobileApp
 {
@@ -35,9 +25,9 @@ namespace MobileApp
         {
             _restautants = new List<RestaurantItem>()
             {
-                new RestaurantItem() {Name = "Nazwa1", Description = "Opis1"},
-                new RestaurantItem() {Name = "Nazwa2", Description = "Opis2"},
-                new RestaurantItem() {Name = "Nazwa3", Description = "Opis3"},
+                new RestaurantItem() {Name = "Nazwa1", Description = "Opis1", DiscountValue = "-10%", DiscountDate = "21.09"},
+                new RestaurantItem() {Name = "Nazwa2", Description = "Opis2", DiscountValue = "-30%", DiscountDate = "12.09"},
+                new RestaurantItem() {Name = "Nazwa3", Description = "Opis3", DiscountValue = "-40%", DiscountDate = "05.09"},
             };
         }
 
@@ -52,6 +42,11 @@ namespace MobileApp
         public void AddRestaurant(RestaurantItem restaurant)
         {
             _restautants.Add(restaurant);
+        }
+
+        public void DropDataBase()
+        {
+            _restautants.Clear();
         }
     }
 }
